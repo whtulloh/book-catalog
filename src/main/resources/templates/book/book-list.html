@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{fragments/main_layout}">
+<body>
+    <div layout:fragment="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="book:${books}">
+                    <td th:text="${book.title}"></td>
+                    <td th:text="${book.author}"></td>
+                    <td th:text="${book.description}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
